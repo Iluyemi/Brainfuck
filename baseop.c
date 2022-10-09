@@ -8,6 +8,24 @@ void baseop(char *Line)
 	{
 
 		//switch case
+		switch(Line[i])
+		case '>':
+			array[i+1];
+			break;
+		case '<':
+			array[i-1];
+			break;
+		case '+':
+			1 + array[i];
+			break;
+		case '-':
+			array[i] - 1;
+			break;
+		case '.':
+			printf("Inside cell:%c \t Cell no: %i\n", array[i], i);
+			break;
+		default:
+			printf("wrong input"\n);
 		i++;
 	}
 }
