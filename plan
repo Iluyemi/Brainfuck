@@ -1,0 +1,7 @@
+takes input using getline
+baseop takes input from getline 
+
+in baseloop
+loop through the string char by char
+if array[i] = '<'
+   array[++i]]

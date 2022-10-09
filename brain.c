@@ -1,10 +1,12 @@
 #include<stdio.h>
 #include <unistd.h>
-#include <stdlib.h>
+#include <stdlib.hi>
+#include "baseop.c"
 int main(int argc, char **argv)
 {
-	char Line[20];
-	long n;
+	char *Line;
+	size_t n = 0;
+	int i;
 	FILE *program;
 	if (argc != 2)
 	{
@@ -17,15 +19,10 @@ int main(int argc, char **argv)
 		fprintf(stderr, "File opening eror\n");
 		exit(EXIT_FAILURE);
 	}
-	
-	fread(Line, sizeof(char), n, program);
-	/*if (program = NULL)
-        {
-                fprintf(stderr, "File opening eror\n");
-                exit(EXIT_FAILURE);
-        }
-	*/
-	write(1, &Line, 1);
+	getline(&Line, &n, program);
+	baseop(Line);
 
+
+	
 }
 	
